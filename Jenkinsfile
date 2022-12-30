@@ -6,5 +6,10 @@ pipeline{
                  echo "buid"
              }
         }
+        stage('test'){
+             steps{
+                 echo "test"
+             }
+        }
     }
 }
