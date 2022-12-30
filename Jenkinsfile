@@ -1,10 +1,11 @@
 pipeline{
-    agent{docker{image 'node:latest'}}
+    //agent{docker{image 'node:latest'}}
     stages{
         stage('build'){
              steps{
                  echo "buid"
-                 sh "node --version"
+                 //sh "node --version"
+                 echo "build number: $env.BUILD_NUMBER"
              }
         }
         stage('test'){
