@@ -10,7 +10,7 @@ pipeline{
         stage('build'){
              steps{
                  echo "build"
-                 sh "maven --version"
+                 sh "mvn --version"
                  sh "docker --version"
                  echo "build number: $env.BUILD_NUMBER"
              }
