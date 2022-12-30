@@ -7,6 +7,11 @@ pipeline{
     }
     //agent{docker{image 'node:latest'}}
     stages{
+        stage('compile'){
+            steps{
+                sh "mvn clean compile"
+            }
+        }
         stage('build'){
              steps{
                  echo "mavenhome - $mavenHome"
