@@ -9,6 +9,8 @@ pipeline{
     stages{
         stage('build'){
              steps{
+                 echo "mavenhome - $mavenHome"
+                 echo "dockerhome - $dockerHome"
                  echo "build"
                  sh "mvn --version"
                  sh "docker --version"
